@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/TomPed/miscord/issues"
   },
-  "homepage": "https://github.com/TomPed/miscord#readme"
+  "homepage": "https://github.com/TomPed/miscord#readme",
+  "dependencies": {
+    "discord.js": "^7.0.1"
+  }
 }
