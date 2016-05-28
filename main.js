@@ -12,7 +12,7 @@ bot.on('message', function (msg) {
       voice.playFile('https://hydra-media.cursecdn.com/dota2.gamepedia.com/e/ee/Wdoc_inthebag_01.mp3', {volume : '.125'}, function (error, intent) {
         if (error) throw error;
         intent.on('end', function () {
-          bot.leaveVoiceChannel(userChannel);
+          bot.leaveVoiceChannel(bot.user.channel);
         });
       });
     })
