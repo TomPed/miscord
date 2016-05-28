@@ -23,6 +23,7 @@
   "homepage": "https://github.com/TomPed/miscord#readme",
   "dependencies": {
     "discord.js": "^7.0.1",
-    "dotenv": "^2.0.0"
+    "dotenv": "^2.0.0",
+    "node-opus": "^0.1.13"
   }
 }
