@@ -1,12 +1,25 @@
 require('dotenv').config();
+var playFile = require('./lib/playFile');
 var Discord = require('discord.js');
 
 var bot = new Discord.Client();
+var availableCommands = ['%bag'];
 
 bot.on('message', function (msg) {
-    if (msg.content === 'Ping') {
-        bot.sendMessage(msg, 'Pong');
-    }
+  var voiceChannel = msg.author.voiceChannel;
+  var message = msg.content;
+
+  if (!message.startsWith('%')) {
+    return;
+  }
+
+  switch (message) {
+    case '%bag':
+      playFile(bot, voiceChannel, 'https://hydra-media.cursecdn.com/dota2.gamepedia.com/e/ee/Wdoc_inthebag_01.mp3');
+      break;
+    default:
+      bot.reply(msg, 'available commands are: ' + availableCommands);
+  }
 });
 
 bot.loginWithToken(process.env.BOT_TOKEN);
