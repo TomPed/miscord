@@ -2,11 +2,14 @@ require('dotenv').config();
 var playFile = require('./lib/playFile');
 var randomRange = require('./lib/randomRange');
 var Discord = require('discord.js');
+var Wolfram = require('wolfram-alpha').createClient('KYTUA6-6R7VVL9L5K');
 
 var bot = new Discord.Client();
-var availableCommands = ['.bag', '.gg', '.random'];
+var availableCommands = ['.bag', '.gg', '.random', '.math'];
 var random = ['audio/duh1.mp3', 'audio/duh2.mp3', 'audio/duh3.mp3'];
 var randomNumber = random.length;
+
+
 
 bot.on('message', function (msg) {
   var voiceChannel = msg.author.voiceChannel;
@@ -25,6 +28,13 @@ bot.on('message', function (msg) {
       break;
     case availableCommands[2]:
       playFile(bot, voiceChannel, '1.2', random[randomRange(randomNumber)]);
+      break;
+    case availableCommands[3]: // .math
+      // call math function
+      Wolfram.query("integrate 2x", function (err, result) {
+        if (err) throw err;
+        bot.reply(msg, "Result:" + result);
+      });
       break;
     default:
       bot.reply(msg, 'available commands are: ' + availableCommands.join(', '));
