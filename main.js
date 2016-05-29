@@ -8,6 +8,10 @@ var availableCommands = ['.bag, .gg'];
 var random = ['audio/duh1.mp3', 'audio/duh2.mp3', 'audio/duh3.mp3'];
 var randomNumber = random.length;
 
+bot.on("voiceJoin", () => {
+	sendMessage("history", "voiceJoin event fired");
+});
+
 bot.on('message', function (msg) {
   var voiceChannel = msg.author.voiceChannel;
   var message = msg.content;
