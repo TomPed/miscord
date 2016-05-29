@@ -15,6 +15,7 @@
     "TomPed",
     "michaeltcoyle",
     "xyfer",
+    "weweboom",
     "AceAero"
   ],
   "license": "MIT",
@@ -23,11 +24,12 @@
   },
   "homepage": "https://github.com/TomPed/miscord#readme",
   "dependencies": {
+    "dateformat": "^1.0.12",
     "discord.js": "^7.0.1",
     "dotenv": "^2.0.0",
     "node-opus": "^0.1.13"
   },
   "scripts": {
-    "bot" : "node main.js"
+    "bot": "node main.js"
   }
 }
