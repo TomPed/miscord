@@ -4,7 +4,11 @@ Miscord, or Meme Discord, is a meme bot for [Discord](https://discordapp.com/). 
 
 We are primarily making memes from games that our friends play together. If you have any requests just make an issue or a pull request!
 
+##  Using Miscord on Your Server
+
 Add [the bot](https://discordapp.com/oauth2/authorize?&client_id=185584861463969793&scope=bot) to your Discord server.
+
+If you type `.help` it will list the commands you can use. Along with memes, Miscord also logs users joining and leaving voice channels in the server. For this to work you must have a text channel called `history` (you should mute this channel so you don't get notifications).
 
 ## Build Guide
 
