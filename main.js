@@ -1,47 +1,16 @@
 require('dotenv').config();
-var dateFormat = require('dateformat');
-var playFile = require('./lib/playFile');
-var randomRange = require('./lib/randomRange');
+var parser = require('./lib/parser');
+var history = require('./lib/history');
 var Discord = require('discord.js');
 
 var bot = new Discord.Client();
-var availableCommands = ['.bag', '.gg', '.random', '.dp', '.lion'];
-var random = ['audio/duh1.mp3', 'audio/duh2.mp3', 'audio/duh3.mp3'];
-var randomNumber = random.length;
 
 bot.on('voiceJoin', function (channel, user) {
-  var date = new Date();
-  var message = '**' + user.username + '**' + ' joined **' + channel.name + '** at **' + dateFormat(date, 'mmmm dS, yyyy, h:MM:ss TT Z') + '**';
-  bot.sendMessage(bot.channels.get('name', 'history'), message);
+  history(bot, channel, user);
 });
 
 bot.on('message', function (msg) {
-  var voiceChannel = msg.author.voiceChannel;
-  var message = msg.content;
-
-  if (!message.startsWith('.')) {
-    return;
-  }
-
-  switch (message) {
-    case availableCommands[0]:
-      playFile(bot, voiceChannel, '.125', 'https://hydra-media.cursecdn.com/dota2.gamepedia.com/e/ee/Wdoc_inthebag_01.mp3');
-      break;
-    case availableCommands[1]:
-      playFile(bot, voiceChannel, '.25', 'audio/gg.mp3');
-      break;
-    case availableCommands[2]:
-      playFile(bot, voiceChannel, '1.2', random[randomRange(randomNumber)]);
-      break;
-    case availableCommands[3]:
-      playFile(bot, voiceChannel, '.5', 'http://hydra-media.cursecdn.com/dota2.gamepedia.com/b/b4/Dpro_wailing_03.mp3');
-      break;
-    case availableCommands[4]:
-      playFile(bot, voiceChannel, '.5', 'http://hydra-media.cursecdn.com/dota2.gamepedia.com/4/4a/Lion_respawn_01.mp3');
-      break;
-    default:
-      bot.reply(msg, 'available commands are: ' + availableCommands.join(', '));
-  }
+  parser(bot, msg);
 });
 
 bot.loginWithToken(process.env.BOT_TOKEN);
