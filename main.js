@@ -7,9 +7,18 @@ var bot = new Discord.Client();
 var availableCommands = ['.bag, .gg'];
 var random = ['audio/duh1.mp3', 'audio/duh2.mp3', 'audio/duh3.mp3'];
 var randomNumber = random.length;
-
-bot.on("voiceJoin", () => {
-	sendMessage("history", "voiceJoin event fired");
+//console.log(bot.channels.length);
+var historyChannel = bot.channels.get('name', 'history');
+//console.log(historyChannel.name);
+var counter = 1;
+bot.on("voiceJoin", function(channel, user) {
+        console.log(user.username + " joined " + channel.name);
+            bot.sendMessage(historyChannel, "voiceJoin event fired", { }, function (err) {
+             //console.log(bot.channels.getAll("name", "history"));
+             //console.log ("----");
+             //console.log(User.username);
+             //console.log(counter++);
+       });
 });
 
 bot.on('message', function (msg) {
