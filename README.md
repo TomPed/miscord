@@ -1,8 +1,10 @@
 # :no_mouth: Miscord :fire:
 
-Miscord, or Meme Discord, is a meme bot for Discord. I meme, who doesn't like memes, you know what I meme :boom:?
+Miscord, or Meme Discord, is a meme bot for [Discord](https://discordapp.com/). I meme, who doesn't like memes, you know what I meme :boom:?
 
 We are primarily making memes from games that our friends play together. If you have any requests just make an issue or a pull request!
+
+Add [the bot](https://discordapp.com/oauth2/authorize?&client_id=185584861463969793&scope=bot) to your Discord server.
 
 ## Build Guide
 
