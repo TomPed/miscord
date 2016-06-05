@@ -6,7 +6,11 @@ var Discord = require('discord.js');
 var bot = new Discord.Client();
 
 bot.on('voiceJoin', function (channel, user) {
-  history(bot, channel, user);
+  history('join', bot, channel, user);
+});
+
+bot.on('voiceLeave', function (channel, user) {
+  history('leave', bot, channel, user);
 });
 
 bot.on('message', function (msg) {
