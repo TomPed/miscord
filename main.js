@@ -5,7 +5,6 @@ var presenceUpdated = require ('./lib/presence');
 var Discord = require('discord.js');
 
 var bot = new Discord.Client();
-var historyChannel = "";
 
 bot.on('voiceJoin', function (channel, user) {
   history(bot, channel, user);
