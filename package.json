@@ -30,6 +30,14 @@
     "node-opus": "^0.1.13"
   },
   "scripts": {
-    "bot": "node main.js"
+    "bot": "node main.js",
+    "jsHint": "gulp jsHint"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.1",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0",
+    "yargs": "^4.7.1"
   }
 }

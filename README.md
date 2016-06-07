@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/TomPed/miscord.svg?branch=master)](https://travis-ci.org/TomPed/miscord)
+
 # :no_mouth: Miscord :fire:
 
 Miscord, or Meme Discord, is a meme bot for [Discord](https://discordapp.com/). I meme, who doesn't like memes, you know what I meme :boom:?
