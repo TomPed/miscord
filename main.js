@@ -1,3 +1,5 @@
+'use strict';
+
 require('dotenv').config();
 var parser = require('./lib/parser');
 var history = require('./lib/history');
