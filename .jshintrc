@@ -5,5 +5,6 @@
   "bitwise": true,
   "eqeqeq": true,
   "strict": true,
-  "indent": 2
+  "indent": 2,
+  "unused": true
 }
