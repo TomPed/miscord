@@ -1,0 +1,9 @@
+{
+  "node": true,
+  "curly": true,
+  "quotmark": "single",
+  "bitwise": true,
+  "eqeqeq": true,
+  "strict": true,
+  "indent": 2
+}
