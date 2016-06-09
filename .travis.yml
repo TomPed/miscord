@@ -2,13 +2,13 @@ language: node_js
 node_js:
     - '0.10'
 script: npm run jsHint -- --failTaskOnError
+script: echo $BOT >> .env
 before_install:
     - export DISPLAY=:99.0
     - sh -e /etc/init.d/xvfb start
 before_script:
     - npm install
 deploy:
-  before_deploy: echo $BOT >> .env
   provider: modulus
   api_key: $MODULUS_TOKEN
   project_name: miscord
