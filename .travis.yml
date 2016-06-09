@@ -8,7 +8,8 @@ before_install:
 before_script:
     - npm install
 deploy:
-  before_deploy: "echo $BOT_KEY >> .env"
+  before_deploy: echo $BOT >> .env
   provider: modulus
-  api_key: MODULUS_KEY
+  api_key: $MODULUS_TOKEN
   project_name: miscord
+  skip_cleanup: true
