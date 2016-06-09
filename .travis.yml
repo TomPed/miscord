@@ -12,5 +12,4 @@ deploy:
   provider: modulus
   api_key: $MODULUS_TOKEN
   project_name: miscord
-  on: modulus
   skip_cleanup: true
