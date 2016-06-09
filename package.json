@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/TomPed/miscord#readme",
   "dependencies": {
+    "collections": "^3.0.0",
     "dateformat": "^1.0.12",
     "discord.js": "^7.0.1",
     "dotenv": "^2.0.0",
