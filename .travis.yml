@@ -7,3 +7,8 @@ before_install:
     - sh -e /etc/init.d/xvfb start
 before_script:
     - npm install
+deploy:
+  provider: modulus
+  api_key: MODULUS_KEY
+  project_name: miscord
+  on: deploy
