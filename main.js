@@ -5,9 +5,14 @@ var eventLogging = require('./lib/eventLogging');
 var parser = require('./lib/parser');
 var Discord = require('discord.js');
 var utils = require('./lib/utils');
-
+var DbContext = require('./lib/DbContext');
+var db = new DbContext('preference.db');
 var bot = new Discord.Client();
 var commandMap = utils.getMap();
+
+db.getEntry({ _id: '123'}, function(docs) {
+  console.log(docs);  
+});
 
 bot.on('voiceJoin', function (channel, user) {
   eventLogging.history('join', bot, channel, user);
