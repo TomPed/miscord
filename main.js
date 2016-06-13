@@ -18,6 +18,8 @@ var random = new randomAudioCommand('.random', 'audio/random/', '1', bot);
 var collection = new commandCollection();
 collection.Add(command);
 collection.Add(random);
+collection.Find('.gg').doWork();
+console.log(value);
 console.log(collection.length());
 
 db.getEntry({ _id: '123'}, function(docs) {
