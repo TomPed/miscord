@@ -5,9 +5,11 @@ var eventLogging = require('./lib/eventLogging');
 var parser = require('./lib/parser');
 var Discord = require('discord.js');
 var utils = require('./lib/utils');
-var DbContext = require('./lib/DbContext');
+var DbContext = require('./lib/Models/Database/DbContext');
 var db = new DbContext('preference.db');
 var bot = new Discord.Client();
+var commandCollection = require('./lib/Models/Commands/commandCollection');
+var audioCommand = require('./lib/Models/Commands/audioCommand');
 var commandMap = utils.getMap();
 
 db.getEntry({ _id: '123'}, function(docs) {
