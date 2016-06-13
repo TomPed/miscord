@@ -28,7 +28,9 @@
     "dateformat": "^1.0.12",
     "discord.js": "^7.0.1",
     "dotenv": "^2.0.0",
-    "node-opus": "^0.1.13"
+    "node-linq": "0.0.5",
+    "node-opus": "^0.1.13",
+    "redwrap": "0.0.4"
   },
   "scripts": {
     "bot": "node main.js",
