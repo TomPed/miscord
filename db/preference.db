@@ -1,0 +1,8 @@
+{"command":".gg","path":"./audio/random","volume":"1.2","type":"random","_id":"2ta04BGjEAAP87uA"}
+{"command":".reddit","path":null,"volume":null,"type":"reddit","_id":"HTrt2ckQd1B9AXSB"}
+{"command":".bag","path":"https://hydra-media.cursecdn.com/dota2.gamepedia.com/e/ee/Wdoc_inthebag_01.mp3","volume":".125","type":"audio","_id":"MFBVfW21GoidA8PF"}
+{"command":".cheers","path":"https://my.mixtape.moe/dcvdxs.wav","volume":".5","type":"audio","_id":"O6h1K3ex3nGyGV2x"}
+{"command":".gg","path":"./audio/gg.mp3","volume":".25","type":"audio","_id":"bA0ITBRJbRhN9o1P"}
+{"command":".lion","path":"http://hydra-media.cursecdn.com/dota2.gamepedia.com/4/4a/Lion_respawn_01.mp3","volume":".25","type":"audio","_id":"bS3gYZIsgNNGSAnQ"}
+{"command":".random","path":"./audio/gg.mp3","volume":".25","type":"random","_id":"ht33oaUuP5giHFVm"}
+{"command":".trump","path":"./audio/trump","volume":"1.5","type":"random","_id":"ynyIK88s2rwLZ0cZ"}
